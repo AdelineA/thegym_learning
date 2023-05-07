@@ -1,6 +1,4 @@
-*{
-    box-sizing: border-box;
-}
+
 body{
     display: grid;
     margin: 0%;
@@ -10,12 +8,14 @@ body{
   margin: 0%;
   font-family: sans-serif;
   display: grid;
-  grid-template-columns: 30% auto;
-  grid-template-rows: 60px auto auto 60px ;
-  grid-template-areas: "hd hd"
-                       " aside main"
-                       "section section"
-                        "footer footer";
+  grid-template-columns:30% 10% auto;
+  grid-template-rows: auto;
+  grid-template-areas: "hd hd hd"
+                       "aside main main"
+                       "section section section"
+                        "footer footer footer";
+  column-gap: 10px;
+  row-gap: 10px;                      
 }
 header{
     grid-area: hd;
@@ -39,6 +39,7 @@ main{
     background: brown;
     padding-left: 20px;
 }
+
 aside{
     grid-area: aside;
     background: blanchedalmond;
@@ -46,23 +47,27 @@ aside{
 }
 .head1{
     padding-top: 30px;
+    
 }
 .wrapper{
     grid-area: section;
     padding: 12px;
     height: fit-content;
-    /* display: flex; */
-
+    grid-column-start: 2;
+    background: wheat;
+   
+    
+    
 }
 .divs{
     display: flex;
-    gap: 60px;
-    padding-left: 20px;
+    gap: 30px
+    
+
 }
 .div1{
     
     text-align: center;
-    
     color: rgb(109, 226, 241);
     
 }
@@ -70,4 +75,5 @@ footer{
     grid-area: footer;
     background: skyblue;
     text-align: center;
+    align-self: stretch;
 }
